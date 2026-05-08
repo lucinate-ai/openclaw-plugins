@@ -1,0 +1,27 @@
+{
+  "name": "@lucinate-ai/openclaw-file-list",
+  "version": "1.0.0",
+  "description": "OpenClaw plugin that adds a file/directory listing tool for use via the tools HTTP API",
+  "type": "module",
+  "main": "./src/index.ts",
+  "openclaw": {
+    "extensions": ["./src/index.ts"],
+    "compat": {
+      "pluginApi": ">=2026.3.24-beta.2",
+      "minGatewayVersion": "2026.3.24-beta.2"
+    },
+    "build": {
+      "openclawVersion": "2026.4.27",
+      "pluginSdkVersion": "2026.4.27"
+    }
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "typebox": "^0.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}

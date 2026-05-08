@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id": "file-list",
+  "name": "File List",
+  "description": "Adds a list_files tool for reading directory contents via the OpenClaw tools HTTP API",
+  "version": "1.0.0",
+  "contracts": {
+    "tools": ["list_files"]
+  },
+  "activation": {
+    "onStartup": true
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "allowedPaths": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Restrict directory listing to these paths (glob patterns). Empty = unrestricted."
+      },
+      "maxDepth": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 10,
+        "default": 1,
+        "description": "Maximum directory depth for recursive listings"
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "@lucinate-ai/openclaw-plugins",
+  "private": true,
+  "description": "OpenClaw plugins by Lucinate",
+  "type": "module",
+  "workspaces": ["packages/*"]
+}
